@@ -1,0 +1,7 @@
+/node_modules
+/src
+/coverage
+
+jest.config.ts
+tsconfig.json
+ts.config.ts
