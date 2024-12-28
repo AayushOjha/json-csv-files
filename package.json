@@ -1,6 +1,6 @@
 {
   "name": "json-csv-files",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "utilities for effortlessly handel json and csv with files in js/ts.",
   "main": "index.js",
   "module": "./dist/index.mjs",

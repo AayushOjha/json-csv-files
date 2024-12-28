@@ -1,15 +1,19 @@
 import fs from "fs";
 
-async function appendToArrayJsonFile(filePath: string, newData: any) {
+async function appendToArrayJsonFile(filePath: string, newData: any, spread = false) {
   try {
     let data = fs.readFileSync(filePath, "utf8");
 
     if (data === "") data = "[]";
 
-    const jsonData = JSON.parse(data);
+    let jsonData = JSON.parse(data);
     
     if (!Array.isArray(jsonData)) {
       throw new Error("Data inside the file is not an array");
+    }
+
+    if (spread) {
+      jsonData = [...jsonData, ...newData]
     }
     jsonData.push(newData);
 

@@ -5,3 +5,4 @@
 jest.config.ts
 tsconfig.json
 ts.config.ts
+tsup.config.ts
